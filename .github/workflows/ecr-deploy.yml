@@ -27,7 +27,7 @@ jobs:
     - name: push ecr
       uses: Deep-Consulting-Solutions/ecr-deploy-action@main
       with:
-        service-key: 'n8n' 
-        account: ${{ secrets.DCS_AWS_ACCOUNT }}
+        service-key: 'n8n'
+        account: "861276122638"
         source-image: ${{ github.ref_name }}
         tag: ${{ github.ref_name }}
