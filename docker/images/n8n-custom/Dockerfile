@@ -15,7 +15,7 @@ RUN apk add --update libc6-compat jq
 RUN corepack enable && corepack prepare --activate
 USER node
 
-RUN printf "@deep-consulting-solutions:registry=https://npm.pkg.github.com/\nalways-auth=true\n//npm.pkg.github.com/:_authToken=%s" $TOKEN_FOR_PACKAGES >> .npmrc
+RUN printf "@balance-my-hormones:registry=https://npm.pkg.github.com/\nalways-auth=true\n//npm.pkg.github.com/:_authToken=%s" $TOKEN_FOR_PACKAGES >> .npmrc
 RUN pnpm install --frozen-lockfile
 RUN pnpm build
 RUN rm -rf node_modules
@@ -33,8 +33,8 @@ ARG ACCESS_TOKEN
 ENV TOKEN_FOR_PACKAGES=${ACCESS_TOKEN}
 RUN cd /home/node && mkdir .n8n && cd .n8n && mkdir nodes && cd nodes
 WORKDIR /home/node/.n8n/nodes
-RUN printf "@deep-consulting-solutions:registry=https://npm.pkg.github.com/\nalways-auth=true\n//npm.pkg.github.com/:_authToken=%s" $TOKEN_FOR_PACKAGES > .npmrc
-RUN npm install "@deep-consulting-solutions/n8n-nodes-dcs-crm" "@deep-consulting-solutions/n8n-nodes-dcs-noco-db" "@deep-consulting-solutions/n8n-nodes-dcs-s3" "@deep-consulting-solutions/n8n-nodes-esa-sendgrid" "@deep-consulting-solutions/n8n-nodes-dcs-parallel-webhook"
+RUN printf "@balance-my-hormones:registry=https://npm.pkg.github.com/\nalways-auth=true\n//npm.pkg.github.com/:_authToken=%s" $TOKEN_FOR_PACKAGES > .npmrc
+RUN npm install "@balance-my-hormones/n8n-nodes-dcs-crm" "@balance-my-hormones/n8n-nodes-dcs-noco-db" "@balance-my-hormones/n8n-nodes-dcs-s3" "@balance-my-hormones/n8n-nodes-esa-sendgrid" "@balance-my-hormones/n8n-nodes-dcs-parallel-webhook"
 
 # 3. Start with a new clean image with just the code that is needed to run n8n
 FROM n8nio/base:${NODE_VERSION}
