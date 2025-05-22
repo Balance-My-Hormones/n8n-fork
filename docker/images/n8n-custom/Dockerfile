@@ -16,7 +16,7 @@ RUN npm install -g --force pnpm@9.3.0
 USER node
 
 RUN printf "@balance-my-hormones:registry=https://npm.pkg.github.com/\nalways-auth=true\n//npm.pkg.github.com/:_authToken=%s" $TOKEN_FOR_PACKAGES >> .npmrc
-RUN pnpm install --frozen-lockfile
+RUN pnpm install
 RUN pnpm build
 RUN rm -rf node_modules
 RUN jq 'del(.pnpm.patchedDependencies)' package.json > package.json.tmp; mv package.json.tmp package.json
