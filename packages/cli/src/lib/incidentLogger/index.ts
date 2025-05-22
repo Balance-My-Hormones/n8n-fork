@@ -1,6 +1,6 @@
-import incidentHandler from '@deep-consulting-solutions/incident-handling';
+import incidentHandler from '@balance-my-hormones/incident-handling';
 import express from 'express';
-import type { Incident } from '@deep-consulting-solutions/incident-handling';
+import type { Incident } from '@balance-my-hormones/incident-handling';
 import type { INode, IRun, Workflow } from 'n8n-workflow';
 import { setupReusablesAndRoutes } from '../../reusables';
 

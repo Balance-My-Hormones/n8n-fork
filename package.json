@@ -34,7 +34,7 @@
     "test:e2e:all": "cross-env E2E_TESTS=true start-server-and-test start http://localhost:5678/favicon.ico 'cypress run --headless'"
   },
   "dependencies": {
-    "@deep-consulting-solutions/zoho-utils": "^1.6.91",
+    "@balance-my-hormones/zoho-utils": "^1.6.91",
     "@types/ioredis": "^5.0.0",
     "@types/redlock": "^4.0.7",
     "@types/strftime": "^0.9.8",

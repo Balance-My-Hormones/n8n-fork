@@ -1,4 +1,4 @@
-declare module '@deep-consulting-solutions/swagger-editor' {
+declare module '@balance-my-hormones/swagger-editor' {
 	export interface Editor {
 		jsonSchemaValidatorActions: {
 			terminateWorker: Function;

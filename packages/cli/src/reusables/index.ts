@@ -6,8 +6,8 @@ import config from '@/config';
 import type { RedisOptions } from 'ioredis';
 import Redis from 'ioredis';
 import { entities } from '../databases/entities';
-import type { IncidentHandlerOptions } from '@deep-consulting-solutions/incident-handling';
-import incidentHandler from '@deep-consulting-solutions/incident-handling';
+import type { IncidentHandlerOptions } from '@balance-my-hormones/incident-handling';
+import incidentHandler from '@balance-my-hormones/incident-handling';
 import { getConnection } from '@/Db';
 
 export const enum DCSEnvEnum {

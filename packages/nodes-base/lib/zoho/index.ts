@@ -1,4 +1,4 @@
-import { ClientLib, ClientLibCM, ZohoConfig } from '@deep-consulting-solutions/zoho-utils';
+import { ClientLib, ClientLibCM, ZohoConfig } from '@balance-my-hormones/zoho-utils';
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 import redis from '../redis';

@@ -1,4 +1,4 @@
-ARG NODE_VERSION=20
+ARG NODE_VERSION=18
 ARG ACCESS_TOKEN
 
 # 1. Create an image to build n8n
@@ -12,7 +12,7 @@ COPY --chown=node:node packages ./packages
 COPY --chown=node:node patches ./patches
 
 RUN apk add --update libc6-compat jq
-RUN corepack enable && corepack prepare --activate
+RUN npm install -g --force pnpm@9.3.0
 USER node
 
 RUN printf "@balance-my-hormones:registry=https://npm.pkg.github.com/\nalways-auth=true\n//npm.pkg.github.com/:_authToken=%s" $TOKEN_FOR_PACKAGES >> .npmrc
