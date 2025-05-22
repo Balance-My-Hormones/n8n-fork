@@ -25,7 +25,7 @@ jobs:
         docker build --build-arg ACCESS_TOKEN=${{ secrets.GITHUB_TOKEN }} -t "${{ github.ref_name }}" -f docker/images/n8n-custom/Dockerfile .
 
     - name: push ecr
-      uses: Deep-Consulting-Solutions/ecr-deploy-action@main
+      uses: Balance-My-Hormones/ecr-deploy-action@main
       with:
         service-key: 'n8n' 
         account: ${{ secrets.DCS_AWS_ACCOUNT }}
