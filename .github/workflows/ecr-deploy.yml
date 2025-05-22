@@ -28,6 +28,6 @@ jobs:
       uses: Balance-My-Hormones/ecr-deploy-action@main
       with:
         service-key: 'n8n' 
-        account: ${{ secrets.DCS_AWS_ACCOUNT }}
+        account: ${{ secrets.BMH_ACCOUNT_ID }}
         source-image: ${{ github.ref_name }}
         tag: ${{ github.ref_name }}
